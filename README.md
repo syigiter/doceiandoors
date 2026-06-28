@@ -17,6 +17,16 @@ Open `http://127.0.0.1:4321/`.
 3. Use the default Vercel settings for a static site.
 4. Add `doceiandoors.com` and `www.doceiandoors.com` in Vercel Domains.
 
+Current production deploy:
+
+- `https://doceiandoors.vercel.app`
+- GitHub: `https://github.com/syigiter/doceiandoors`
+
+DNS records needed at the current DNS provider:
+
+- `A doceiandoors.com 76.76.21.21`
+- `A www.doceiandoors.com 76.76.21.21`
+
 ## Notes
 
 - Original Doceian images and PDF catalogs were recovered from the Internet Archive.
