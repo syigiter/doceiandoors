@@ -1,4 +1,10 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/molded", "destination": "/#doors", "permanent": true },
+    { "source": "/shaker", "destination": "/#doors", "permanent": true },
+    { "source": "/interior-doors", "destination": "/#doors", "permanent": true }
+  ]
 }
