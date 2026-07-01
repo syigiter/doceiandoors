@@ -46,7 +46,9 @@
   if(form&&status){
     form.addEventListener('submit',function(e){
       e.preventDefault();
-      trackEvent('contact_form_submit',{page_path:window.location.pathname});
+      try{
+        trackEvent('contact_form_submit',{page_path:window.location.pathname});
+      }catch(err){}
       var data=new FormData(form);
       status.textContent='Sending…';
       status.className='';
@@ -65,6 +67,7 @@
           status.textContent='Network error. Please try again.';
           status.className='error';
         });
+      return false;
     });
   }
 
