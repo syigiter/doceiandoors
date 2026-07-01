@@ -43,32 +43,43 @@
   // Contact form — Formspree submission
   var form=document.getElementById('contactForm');
   var status=document.getElementById('formStatus');
-  if(form&&status){
-    form.addEventListener('submit',function(e){
+  var submitBtn=document.getElementById('contactSubmitBtn');
+
+  function handleContactFormSubmit(e){
+    if(e){
       e.preventDefault();
-      try{
-        trackEvent('contact_form_submit',{page_path:window.location.pathname});
-      }catch(err){}
-      var data=new FormData(form);
-      status.textContent='Sending…';
-      status.className='';
-      fetch(form.action,{method:'POST',body:data,headers:{Accept:'application/json'}})
-        .then(function(r){
-          if(r.ok){
-            status.textContent='Message sent! We\'ll be in touch soon.';
-            status.className='success';
-            form.reset();
-          } else {
-            status.textContent='Something went wrong. Please email us directly.';
-            status.className='error';
-          }
-        })
-        .catch(function(){
-          status.textContent='Network error. Please try again.';
+      e.stopPropagation();
+    }
+    if(!form.reportValidity()) return false;
+    try{
+      trackEvent('contact_form_submit',{page_path:window.location.pathname});
+    }catch(err){}
+    var data=new FormData(form);
+    status.textContent='Sending…';
+    status.className='';
+    fetch(form.action,{method:'POST',body:data,headers:{Accept:'application/json'}})
+      .then(function(r){
+        if(r.ok){
+          status.textContent='Message sent! We\'ll be in touch soon.';
+          status.className='success';
+          form.reset();
+        } else {
+          status.textContent='Something went wrong. Please email us directly.';
           status.className='error';
-        });
-      return false;
-    });
+        }
+      })
+      .catch(function(){
+        status.textContent='Network error. Please try again.';
+        status.className='error';
+      });
+    return false;
+  }
+
+  if(form&&status){
+    form.addEventListener('submit',handleContactFormSubmit);
+    if(submitBtn){
+      submitBtn.addEventListener('click',handleContactFormSubmit);
+    }
   }
 
   // Catalog/PDF click tracking
