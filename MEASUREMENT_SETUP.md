@@ -75,22 +75,22 @@ Next steps:
 
 ## Phase 2C — Business Event Tracking
 
-Status: Planned
+Status: Installed
 
-Important events to track:
+Events implemented:
 
-- Contact form submit
-- Catalog PDF clicks
-- Contact CTA clicks
-- Request quote clicks
-- Email clicks
-- Phone clicks, if phone links are present
+- `contact_form_submit` — Contact form submission (page_path)
+- `catalog_click` — PDF/catalog link clicks (link_url, link_text, page_path)
+- `contact_cta_click` — Contact CTA link clicks to /contact or #contact (link_url, link_text, page_path)
+- `email_click` — mailto: link clicks (link_url, link_text, page_path)
+- `phone_click` — tel: link clicks (link_url, link_text, page_path)
 
 Implementation notes:
 
-- Event tracking should be added only after GA4 baseline is established.
-- Existing form behavior must not be broken.
-- Existing links must continue to work normally.
+- Events use the existing GA4 gtag function; fails silently if unavailable
+- No personal data (name, email, phone, message) is sent in event parameters
+- Existing form behavior and link navigation remain unchanged
+- All link tracking is non-blocking and does not delay navigation
 
 ## Phase 2D — Vercel Analytics and Speed Insights
 
