@@ -26,7 +26,7 @@ Before major SEO and content changes, establish baseline measurement so traffic,
 
 ## Phase 1 — Maintenance and Documentation Cleanup
 
-Status: In progress
+Status: Completed
 
 Scope:
 
@@ -45,7 +45,9 @@ Expected files:
 
 ## Phase 2 — Measurement and Analytics Setup
 
-Status: Planned
+Status: In progress
+
+Note: Measurement setup should start with Google Search Console domain property verification and sitemap submission before adding GA4 or event tracking scripts.
 
 Scope:
 
