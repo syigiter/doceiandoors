@@ -73,20 +73,26 @@ Rules:
 
 ## Phase 3 — SEO Metadata and Sitemap Improvement
 
-Status: Planned
+Status: Completed
 
 Scope:
 
-- Improve title and meta description tags.
-- Add or verify canonical URLs.
-- Add Open Graph metadata.
-- Review heading hierarchy.
-- Improve image alt text.
-- Expand and verify sitemap entries.
+- Improve title and meta description tags. ✓
+- Add or verify canonical URLs. ✓
+- Add Open Graph metadata. ✓
+- Review heading hierarchy. ✓
+- Improve image alt text. ✓
+- Expand and verify sitemap entries. ✓
+
+Note: Phase 3 completed in two parts:
+- Phase 3A: SEO metadata (og:title, og:url, twitter:card, canonical) — Completed
+- Phase 3B: Structured data (JSON-LD schemas, heading review) — Completed
 
 ## Phase 4 — US Market Content Strengthening
 
-Status: Planned
+Status: In progress
+
+Note: Phase 4A is documentation and planning only. See US_MARKET_CONTENT_PLAN.md for detailed plan. Phase 4B implementation in separate PRs will follow.
 
 Scope:
 
@@ -94,6 +100,7 @@ Scope:
 - Position products for distributors, builders, wholesalers, and project buyers.
 - Strengthen content for molded, shaker, and primed doors.
 - Add clearer wholesale and project supply messaging.
+- Add buyer-type guidance across pages.
 
 ## Phase 5 — Lead Form and CTA Improvement
 
