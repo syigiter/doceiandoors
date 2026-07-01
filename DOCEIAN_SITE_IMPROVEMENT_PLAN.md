@@ -47,7 +47,7 @@ Expected files:
 
 Status: In progress
 
-Note: GA4 base tracking approved and being installed. Search Console property exists. Business event tracking deferred to Phase 2C.
+Note: GA4 base tracking and business event tracking installed. Search Console property exists. Phase 2 measurement setup substantially complete; Vercel Analytics/Speed Insights remains as a separate decision.
 
 Scope:
 

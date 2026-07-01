@@ -1,4 +1,11 @@
 (function(){
+  // Safe GA4 event tracking helper
+  function trackEvent(eventName, params) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, params || {});
+    }
+  }
+
   var menuButton=document.getElementById('menuButton');
   var nav=document.getElementById('nav');
   if(menuButton&&nav){
@@ -39,6 +46,7 @@
   if(form&&status){
     form.addEventListener('submit',function(e){
       e.preventDefault();
+      trackEvent('contact_form_submit',{page_path:window.location.pathname});
       var data=new FormData(form);
       status.textContent='Sending…';
       status.className='';
@@ -59,4 +67,48 @@
         });
     });
   }
+
+  // Catalog/PDF click tracking
+  document.querySelectorAll('a[href$=".pdf"]').forEach(function(link){
+    link.addEventListener('click',function(){
+      trackEvent('catalog_click',{
+        link_url:link.getAttribute('href'),
+        link_text:link.textContent.trim(),
+        page_path:window.location.pathname
+      });
+    });
+  });
+
+  // Contact CTA click tracking (contact links and #contact anchors, but not email/phone/pdf)
+  document.querySelectorAll('a[href="/contact"],a[href="#contact"]').forEach(function(link){
+    link.addEventListener('click',function(){
+      trackEvent('contact_cta_click',{
+        link_url:link.getAttribute('href'),
+        link_text:link.textContent.trim(),
+        page_path:window.location.pathname
+      });
+    });
+  });
+
+  // Email click tracking
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(link){
+    link.addEventListener('click',function(){
+      trackEvent('email_click',{
+        link_url:link.getAttribute('href'),
+        link_text:link.textContent.trim(),
+        page_path:window.location.pathname
+      });
+    });
+  });
+
+  // Phone click tracking
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(link){
+    link.addEventListener('click',function(){
+      trackEvent('phone_click',{
+        link_url:link.getAttribute('href'),
+        link_text:link.textContent.trim(),
+        page_path:window.location.pathname
+      });
+    });
+  });
 })();
