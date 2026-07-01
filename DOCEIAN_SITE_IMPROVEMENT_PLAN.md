@@ -45,7 +45,9 @@ Expected files:
 
 ## Phase 2 — Measurement and Analytics Setup
 
-Status: Planned
+Status: In progress
+
+Note: GA4 base tracking approved and being installed. Search Console property exists. Business event tracking deferred to Phase 2C.
 
 Scope:
 
