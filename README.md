@@ -30,5 +30,5 @@ DNS records needed at the current DNS provider:
 ## Notes
 
 - Original Doceian images and PDF catalogs were recovered from the Internet Archive.
-- Contact form currently uses `mailto:info@doceiandoors.com`.
+- Contact form currently uses Formspree.
 - For a production-grade form, connect Formspree, Resend, or a Vercel serverless function.
