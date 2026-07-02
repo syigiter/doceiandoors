@@ -105,8 +105,47 @@
           <input type="email" name="email" autocomplete="email" required>
         </label>
         <label>
+          <span>Phone (optional)</span>
+          <input type="tel" name="phone" autocomplete="tel" placeholder="+1 555 000 0000">
+        </label>
+        <label>
+          <span>Buyer type (optional)</span>
+          <select name="buyer_type">
+            <option value="">Select buyer type</option>
+            <option value="distributor">Distributor</option>
+            <option value="builder">Builder</option>
+            <option value="contractor">Contractor</option>
+            <option value="wholesaler">Wholesaler</option>
+            <option value="millwork_supplier">Millwork supplier</option>
+            <option value="project_buyer">Project buyer</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label>
+          <span>Product interest (optional)</span>
+          <select name="product_interest">
+            <option value="">Select product interest</option>
+            <option value="molded_interior_doors">Molded interior doors</option>
+            <option value="shaker_interior_doors">Shaker interior doors</option>
+            <option value="primed_interior_doors">Primed interior doors</option>
+            <option value="multiple_collections">Multiple collections</option>
+            <option value="not_sure">Not sure yet</option>
+          </select>
+        </label>
+        <label>
+          <span>Inquiry type (optional)</span>
+          <select name="inquiry_type">
+            <option value="">Select inquiry type</option>
+            <option value="catalog_request">Catalog request</option>
+            <option value="sample_discussion">Sample discussion</option>
+            <option value="wholesale_inquiry">Wholesale inquiry</option>
+            <option value="project_inquiry">Project inquiry</option>
+            <option value="general_product_question">General product question</option>
+          </select>
+        </label>
+        <label>
           <span>Message</span>
-          <textarea name="message" rows="5" required></textarea>
+          <textarea name="message" rows="5" required placeholder="Tell us about your market, project, quantity range, timeline, or any product questions."></textarea>
         </label>
         <button class="button button-primary" type="button" id="contactSubmitBtn">Send inquiry</button>
         <p id="formStatus"></p>
