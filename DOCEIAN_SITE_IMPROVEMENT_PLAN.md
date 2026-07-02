@@ -96,7 +96,7 @@ Note: Phase 4A is documentation and planning only. See US_MARKET_CONTENT_PLAN.md
 - Phase 4B-1 — Homepage positioning: Completed.
 - Phase 4B-2 — Interior Doors hub (collection comparison + "how to choose"): Completed.
 - Phase 4B-3 — Product pages (molded, shaker, primed) "when to choose" buyer guidance: Completed.
-- Phase 4B-4 — Contact page: Pending.
+- Phase 4B-4 — Contact page inquiry clarity ("who we work with" + "what to include"): Completed.
 
 Scope:
 
