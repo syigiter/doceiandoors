@@ -121,7 +121,9 @@ Scope:
 
 Status: In progress
 
-Note: This is the current active phase (tracked in this engagement as "Phase 5 — Catalog and Product Presentation"), being executed ahead of the Lead Form phase above. Phase 5A is audit/planning only — no HTML/CSS/JS changes. See CATALOG_PRESENTATION_AUDIT.md for the full audit and the proposed Phase 5B implementation. Phase 5B (live catalog/CTA changes) will follow in a separate PR.
+Note: This is the current active phase (tracked in this engagement as "Phase 5 — Catalog and Product Presentation"), being executed ahead of the Lead Form phase above. See CATALOG_PRESENTATION_AUDIT.md for the full audit and the proposed implementation.
+- Phase 5A — Catalog presentation audit (planning only): Completed.
+- Phase 5B — Catalog CTA implementation: Completed. Real "View models catalog (PDF)" and "View technical drawings (PDF)" links added to the Interior Doors hub and the molded/shaker/primed product pages, alongside the contact CTA. No JS change needed — existing GA4 catalog_click already tracks .pdf links.
 
 Scope:
 
