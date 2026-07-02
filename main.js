@@ -51,10 +51,16 @@
       e.stopPropagation();
     }
     if(!form.reportValidity()) return false;
-    try{
-      trackEvent('contact_form_submit',{page_path:window.location.pathname});
-    }catch(err){}
     var data=new FormData(form);
+    try{
+      // Privacy-safe: only dropdown enum values go to GA4 — never name/email/phone/message.
+      trackEvent('contact_form_submit',{
+        page_path:window.location.pathname,
+        buyer_type:data.get('buyer_type')||'not_selected',
+        product_interest:data.get('product_interest')||'not_selected',
+        inquiry_type:data.get('inquiry_type')||'not_selected'
+      });
+    }catch(err){}
     status.textContent='Sending…';
     status.className='';
     fetch(form.action,{method:'POST',body:data,headers:{Accept:'application/json'}})

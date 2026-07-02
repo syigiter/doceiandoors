@@ -82,8 +82,8 @@ h3{font-size:1.25rem;margin-bottom:10px}
 .contact-list a{color:var(--accent)}
 .contact-form{display:grid;gap:14px}
 .contact-form label{display:grid;gap:6px;color:var(--muted);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-.contact-form input,.contact-form textarea{width:100%;border:1px solid var(--line);border-radius:var(--radius);padding:12px 13px;font:inherit;color:var(--ink)}
-.contact-form input:focus,.contact-form textarea:focus{outline:2px solid rgba(179,31,43,.22);border-color:var(--accent)}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;border:1px solid var(--line);border-radius:var(--radius);padding:12px 13px;font:inherit;color:var(--ink)}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:2px solid rgba(179,31,43,.22);border-color:var(--accent)}
 
 .site-footer{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px clamp(18px,4vw,46px);background:#fff;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
 .site-footer img{width:118px}.site-footer p{margin:0}.footer-links{display:flex;gap:18px;font-weight:800;color:var(--ink-soft)}

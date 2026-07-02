@@ -112,7 +112,7 @@ Status: In progress
 
 Note: This is the current active phase (tracked in this engagement as "Phase 6 — Conversion / Lead Quality"). See LEAD_FORM_AUDIT.md for the full audit and the proposed implementation.
 - Phase 6A — Lead form and conversion audit (planning only): Completed. The contact form has 3 required fields (name, email, message) and captures no structured lead data; buyer type, product interest, and inquiry type currently depend on free-text compliance. GA4 events are privacy-safe but do not segment lead quality.
-- Phase 6B — Recommended scope (not started): add optional structured lead fields (buyer type, product interest, inquiry type dropdowns + optional phone), improve the message placeholder, and optionally add privacy-safe GA4 enum parameters — while preserving the Formspree endpoint and Safari-safe submit behavior. Keep name/email/message the only required fields.
+- Phase 6B — Optional structured lead fields: Completed. Added optional phone, buyer type, product interest, and inquiry type fields to the contact form; required fields remain name, email, and message. Improved the message placeholder. GA4 contact_form_submit now includes only privacy-safe enum values (buyer_type, product_interest, inquiry_type) — no name/email/phone/message sent to GA4. Formspree endpoint and Safari-safe submit behavior (type="button", preventDefault/stopPropagation, fetch) preserved; the Formspree FormData still submits all fields. Extended the existing .contact-form input/textarea CSS rule to include select for visual consistency.
 
 Scope:
 
