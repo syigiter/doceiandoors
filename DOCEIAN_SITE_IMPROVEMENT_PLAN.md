@@ -95,7 +95,7 @@ Status: In progress
 Note: Phase 4A is documentation and planning only. See US_MARKET_CONTENT_PLAN.md for detailed plan. Phase 4B implementation is proceeding in separate PRs:
 - Phase 4B-1 — Homepage positioning: Completed.
 - Phase 4B-2 — Interior Doors hub (collection comparison + "how to choose"): Completed.
-- Phase 4B-3 — Product pages (molded, shaker, primed): Pending.
+- Phase 4B-3 — Product pages (molded, shaker, primed) "when to choose" buyer guidance: Completed.
 - Phase 4B-4 — Contact page: Pending.
 
 Scope:
