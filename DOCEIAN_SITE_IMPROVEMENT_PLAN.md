@@ -49,6 +49,8 @@ Status: In progress
 
 Note: GA4 base tracking and business event tracking installed. Search Console property exists. Phase 2 measurement setup substantially complete; Vercel Analytics/Speed Insights remains as a separate decision.
 
+Phase 7A — Measurement baseline and monitoring (in progress): a 7–14 day observation period is now active following the Phase 6B lead-form launch. See MEASUREMENT_MONITORING_PLAN.md for the GA4 / Search Console / Formspree monitoring checklists, review cadence, and post-period decision rules. No further content/code changes should be made until 7–14 days of data are reviewed, unless there is a bug.
+
 Scope:
 
 - Prepare the site for measurement before major SEO and content changes.
@@ -108,11 +110,12 @@ Scope:
 
 ## Phase 5 — Lead Form and CTA Improvement
 
-Status: In progress
+Status: Completed (live)
 
-Note: This is the current active phase (tracked in this engagement as "Phase 6 — Conversion / Lead Quality"). See LEAD_FORM_AUDIT.md for the full audit and the proposed implementation.
+Note: Tracked in this engagement as "Phase 6 — Conversion / Lead Quality". See LEAD_FORM_AUDIT.md for the full audit.
 - Phase 6A — Lead form and conversion audit (planning only): Completed. The contact form has 3 required fields (name, email, message) and captures no structured lead data; buyer type, product interest, and inquiry type currently depend on free-text compliance. GA4 events are privacy-safe but do not segment lead quality.
-- Phase 6B — Optional structured lead fields: Completed. Added optional phone, buyer type, product interest, and inquiry type fields to the contact form; required fields remain name, email, and message. Improved the message placeholder. GA4 contact_form_submit now includes only privacy-safe enum values (buyer_type, product_interest, inquiry_type) — no name/email/phone/message sent to GA4. Formspree endpoint and Safari-safe submit behavior (type="button", preventDefault/stopPropagation, fetch) preserved; the Formspree FormData still submits all fields. Extended the existing .contact-form input/textarea CSS rule to include select for visual consistency.
+- Phase 6B — Optional structured lead fields: Completed and live (PR #20). Added optional phone, buyer type, product interest, and inquiry type fields to the contact form; required fields remain name, email, and message. Improved the message placeholder. GA4 contact_form_submit now includes only privacy-safe enum values (buyer_type, product_interest, inquiry_type) — no name/email/phone/message sent to GA4. Formspree endpoint and Safari-safe submit behavior (type="button", preventDefault/stopPropagation, fetch) preserved; the Formspree FormData still submits all fields. Extended the existing .contact-form input/textarea CSS rule to include select for visual consistency.
+- Live form test confirmed (production): no Safari security warning, no invalid-address warning, no redirect, success message appears, Formspree submission appears, optional fields appear in Formspree, Gmail notification arrived (slight delay).
 
 Scope:
 
