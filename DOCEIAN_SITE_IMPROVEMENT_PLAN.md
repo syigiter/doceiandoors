@@ -108,7 +108,11 @@ Scope:
 
 ## Phase 5 — Lead Form and CTA Improvement
 
-Status: Planned
+Status: In progress
+
+Note: This is the current active phase (tracked in this engagement as "Phase 6 — Conversion / Lead Quality"). See LEAD_FORM_AUDIT.md for the full audit and the proposed implementation.
+- Phase 6A — Lead form and conversion audit (planning only): Completed. The contact form has 3 required fields (name, email, message) and captures no structured lead data; buyer type, product interest, and inquiry type currently depend on free-text compliance. GA4 events are privacy-safe but do not segment lead quality.
+- Phase 6B — Recommended scope (not started): add optional structured lead fields (buyer type, product interest, inquiry type dropdowns + optional phone), improve the message placeholder, and optionally add privacy-safe GA4 enum parameters — while preserving the Formspree endpoint and Safari-safe submit behavior. Keep name/email/message the only required fields.
 
 Scope:
 
@@ -119,9 +123,9 @@ Scope:
 
 ## Phase 6 — Catalog and Product Presentation
 
-Status: In progress
+Status: Completed
 
-Note: This is the current active phase (tracked in this engagement as "Phase 5 — Catalog and Product Presentation"), being executed ahead of the Lead Form phase above. See CATALOG_PRESENTATION_AUDIT.md for the full audit and the proposed implementation.
+Note: Tracked in this engagement as "Phase 5 — Catalog and Product Presentation", executed ahead of the Lead Form phase above. See CATALOG_PRESENTATION_AUDIT.md for the full audit and the implementation. All three sub-phases completed and live.
 - Phase 5A — Catalog presentation audit (planning only): Completed.
 - Phase 5B — Catalog CTA implementation: Completed. Real "View models catalog (PDF)" and "View technical drawings (PDF)" links added to the Interior Doors hub and the molded/shaker/primed product pages, alongside the contact CTA. No JS change needed — existing GA4 catalog_click already tracks .pdf links.
 - Phase 5C — CTA/product flow review + product-page CTA cleanup: Completed. Removed the redundant per-product "Discuss ... door inquiries" contact button from the "When to choose" section on the three product pages, leaving the "Catalog and trade inquiries" section as the single closing CTA hub. Reworded the "Inquiry path" cards to avoid repetition.
