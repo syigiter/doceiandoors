@@ -1,3 +1,6 @@
 .vercel/
 .env*
 reports/
+
+# Local assistant/tooling config
+.claude/
