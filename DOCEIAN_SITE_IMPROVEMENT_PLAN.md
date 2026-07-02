@@ -90,9 +90,9 @@ Note: Phase 3 completed in two parts:
 
 ## Phase 4 — US Market Content Strengthening
 
-Status: In progress
+Status: Completed
 
-Note: Phase 4A is documentation and planning only. See US_MARKET_CONTENT_PLAN.md for detailed plan. Phase 4B implementation is proceeding in separate PRs:
+Note: Phase 4A is documentation and planning only. See US_MARKET_CONTENT_PLAN.md for detailed plan. Phase 4B implementation shipped in separate PRs (all completed and live):
 - Phase 4B-1 — Homepage positioning: Completed.
 - Phase 4B-2 — Interior Doors hub (collection comparison + "how to choose"): Completed.
 - Phase 4B-3 — Product pages (molded, shaker, primed) "when to choose" buyer guidance: Completed.
@@ -119,7 +119,9 @@ Scope:
 
 ## Phase 6 — Catalog and Product Presentation
 
-Status: Planned
+Status: In progress
+
+Note: This is the current active phase (tracked in this engagement as "Phase 5 — Catalog and Product Presentation"), being executed ahead of the Lead Form phase above. Phase 5A is audit/planning only — no HTML/CSS/JS changes. See CATALOG_PRESENTATION_AUDIT.md for the full audit and the proposed Phase 5B implementation. Phase 5B (live catalog/CTA changes) will follow in a separate PR.
 
 Scope:
 
